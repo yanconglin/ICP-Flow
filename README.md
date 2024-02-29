@@ -1,5 +1,5 @@
 # ICP-Flow
-Thank you for your interest. Code will be released upon acceptance.
+Thank you for your interest. I am planning to release the code in two weeks.
 
 ### Citation
 If you find our paper useful in your research, please consider citing:
