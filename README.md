@@ -1,5 +1,6 @@
 # ICP-Flow
 Thank you for your interest. I am planning to release the code in two weeks.
+Update on 13-03: unfortunately have to postpone the release for another two weeks, due to an immense amount of workload. My apologies.
 
 ### Citation
 If you find our paper useful in your research, please consider citing:
