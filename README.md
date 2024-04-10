@@ -1,5 +1,5 @@
 # ICP-Flow
-Thank you for your interest. I am planning to release the code in two weeks.
+Thank you for your interest. 
 
 Update on 13-03: unfortunately have to postpone the release for another two weeks, due to an immense amount of workload. My apologies.
 Update on 10-04: start working on code release. expect to release the code in the coming week.
