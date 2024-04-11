@@ -38,6 +38,7 @@ Please configure all variables beforehand, following the *.sh files.
 
 ```bash
 bash main_waymo.sh
+bash main_nuscenes.sh
 ```
 
 ### Pre-trained Models (optional, only for ICP-Flow + FNN)
