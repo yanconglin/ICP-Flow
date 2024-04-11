@@ -1,0 +1,33 @@
+# # basic config
+out_dir: "results"
+
+data:
+  deskew: False
+  preprocess: True
+  max_range: 100.0 # can be also changed in the CLI
+  min_range: 1.0
+
+mapping:
+  max_points_per_voxel: 20
+
+adaptive_threshold:
+  initial_threshold: 10.0
+  min_motion_th: 0.5
+
+# # # # # # advanced config
+# out_dir: "results"
+
+# data:
+#   deskew: True
+#   preprocess: True
+#   max_range: 64.0 # can be also changed in the CLI
+#   min_range: 1.0
+
+# mapping:
+#   voxel_size: 1.0 # <- optional
+#   max_points_per_voxel: 20
+
+# adaptive_threshold:
+#   fixed_threshold: 10 # <- optional, disables adaptive threshold
+#   # initial_threshold: 2.0
+#   # min_motion_th: 0.1
