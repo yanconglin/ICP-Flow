@@ -1,6 +1,5 @@
-echo 'processing argo'
+echo 'demo'
 pwd
-source /home/yanconglin/miniconda3/etc/profile.d/conda.sh
 conda activate icp_flow 
 
 bash -c "CUDA_DEVICE_ORDER=PCI_BUS_ID \
@@ -17,5 +16,3 @@ bash -c "CUDA_DEVICE_ORDER=PCI_BUS_ID \
         --batch_size=1  --num_workers=0 \
         --if_show
         " 
-
-echo 'processing argo done!'
