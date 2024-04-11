@@ -62,7 +62,7 @@ unzip data.zip
    
 
 ### Test
-Configure all variables beforehand within the *.sh files. You can also find detailed result from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
+Configure all variables beforehand within the *.sh files. You may find detailed results at [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
 
 ```bash
 bash main.sh
@@ -70,13 +70,18 @@ bash main.sh
 
 ### ICP-Flow + FNN
 
-ICP-Flow + FNN shares the identical design as ZeroFlow. You can download our pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
+ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
 
 ### Demo
 
 ```Bash
 bash demo.sh
 ```
+
+### Argoverse-v2 Scene Flow Challenge
+
+Todo:  
+
 
 ### Citation
 ```bash
