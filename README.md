@@ -4,7 +4,7 @@ Official implementation: [ICP-Flow: LiDAR Scene Flow Estimation with ICP](https:
 
 [Yancong Lin](https://yanconglin.github.io/) and [Holger Caesar](https://sites.google.com/it-caesar.de/homepage/).
 
-Intelligent Vehicles Group, Delft University of Technology, The Netherlands
+Delft University of Technology, The Netherlands
 
 Let op: code release in process, not ready to use yet.
 
