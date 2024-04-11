@@ -55,7 +55,8 @@ unzip data.zip
 
 2. Argoverse-v2: see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details.
 
-   I took a different approach to load data: run ZeroFlow on the val/test set, and then save the points/labels in a .npz file per sample. See [dataset_argo.py](dataset_argo.py).
+   I took a different approach to load data: run ZeroFlow on the val/test set, and then save the points/labels in a .npz file per sample.
+   See [dataset_argo.py](dataset_argo.py).
    
 
 ### Test
@@ -64,15 +65,6 @@ Configure all variables beforehand within the *.sh files.
 ```bash
 bash main_waymo.sh
 bash main_nuscenes.sh
-bash main_argo.sh
-```
-
-Regarding the Argoverse-v2 scene flow dataset, see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details, what I did was:
-
-1. Run the ZeroFlow on the val/test set, and then save the points/labels in a .npz file one by one. See for details.
-   
-2. Configure all variables beforehand within the *.sh file.
-```bash
 bash main_argo.sh
 ```
 
