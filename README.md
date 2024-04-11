@@ -34,12 +34,26 @@ unzip data.zip
 ```
 
 ### Test
-Please configure all variables beforehand, following the *.sh files.
+Configure all variables beforehand within the *.sh files.
 
 ```bash
 bash main_waymo.sh
 bash main_nuscenes.sh
 ```
+
+Regarding the Argoverse-v2 scene flow dataset, see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details, what I did was:
+
+1. Run the ZeroFlow on the val/test set, and then save the points/labels in a .npz file one by one. See for details.
+   
+2. Configure all variables beforehand within the *.sh file.
+```bash
+bash main_argo.sh
+```
+
+### full results on Waymo,nuScenes and Argoverse-v2
+Check *.txt.
+
+You can download our reference pre-trained models (for the ICP-Flow + FNN model) from [SURFdrive](). 
 
 ### Pre-trained Models (optional, only for ICP-Flow + FNN)
 
