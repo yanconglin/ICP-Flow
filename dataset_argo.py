@@ -10,7 +10,6 @@ from utils_cluster import cluster_pcd
 import torch
 
 def collate(batch):
-    # print('collate batch: ', len(batch), len(batch[0]))
     return batch
 
 class Dataset_argo():
@@ -130,7 +129,7 @@ class Dataset_argo():
 
         return data
 
-    def cluster_labels_two(self, data, ego_poses, nonground):
+    def cluster_labels(self, data, ego_poses, nonground):
         points_src = []
         points_dst = []
         labels_src = []
@@ -178,7 +177,7 @@ class Dataset_argo():
         ego_poses = data['ego_motion_gt']
         data['ego_poses'] = ego_poses
         nonground = np.ones((len(data['raw_points']))).astype(bool)
-        points_src, points_dst, labels_src, labels_dst = self.cluster_labels_two(data, ego_poses, nonground) 
+        points_src, points_dst, labels_src, labels_dst = self.cluster_labels(data, ego_poses, nonground) 
         return data, points_src, points_dst, labels_src, labels_dst
 
 
