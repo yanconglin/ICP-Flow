@@ -56,10 +56,8 @@ Regarding the Argoverse-v2 scene flow dataset, see [ZeroFlow: Scalable Scene Flo
 bash main_argo.sh
 ```
 
-### full results on Waymo,nuScenes and Argoverse-v2
+### Full results on Waymo,nuScenes, and Argoverse-v2
 Check *.txt.
-
-You can download our reference pre-trained models (for the ICP-Flow + FNN model) from [SURFdrive](). 
 
 ### Pre-trained Models (optional, only for ICP-Flow + FNN)
 
