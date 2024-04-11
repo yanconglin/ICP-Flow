@@ -25,7 +25,7 @@ conda create -f environment.yml
 2. Install [Patchwork++](https://github.com/url-kaist/patchwork-plusplus) for ground segmentation, by following [patchwork-plusplus/README.md](patchwork-plusplus/README.md). Once done, update the [path](https://github.com/yanconglin/ICP-Flow/blob/c93add6617a643e3c9db6b15c801b45e761411a5/utils_ground.py#L9) accordingly. It may take a while. There are several modifications on top of the original Patchwork++ to output point indices.
 
 ```bash
-# To install Eigen and numpy
+# To install Eigen
 $ sudo apt-get install libeigen3-dev
 
 # To install Open3D C++ packages
@@ -44,7 +44,7 @@ $ cmake ..
 $ make
 ```
 
-### Processing the Dataset
+### Dataset
 
 1. Waymo and nuScenes: follow [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) to prepare the dataset, or you can simply run
 
