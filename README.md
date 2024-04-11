@@ -22,7 +22,7 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
 ```bash
 conda create -f environment.yml
 ```
-2. Install [Patchwork++](https://github.com/url-kaist/patchwork-plusplus) for ground segmentation, by following [patchwork-plusplus/README.md](patchwork-plusplus/README.md). It may take a while. There are several modifications on top of the original Patchwork++ to accommodate the point indices.
+2. Install [Patchwork++](https://github.com/url-kaist/patchwork-plusplus) for ground segmentation, by following [patchwork-plusplus/README.md](patchwork-plusplus/README.md). It may take a while. There are several modifications on top of the original Patchwork++ to accommodate point indices.
 
 ### Processing the Dataset
 
