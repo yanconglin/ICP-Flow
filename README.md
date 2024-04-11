@@ -61,7 +61,7 @@ unzip data.zip
    Alternatively, you may also load pretrained checkpoints (see below) to ZeroFlow and test on Argoverse-v2 using the ZeroFlow codebase. 
    
 
-### Test
+### Test ICP-Flow
 Configure all variables beforehand within the *.sh files. You may find detailed results at [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
 
 ```bash
