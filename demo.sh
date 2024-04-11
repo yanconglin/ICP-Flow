@@ -5,10 +5,7 @@ conda activate sf_icp
 
 bash -c "CUDA_DEVICE_ORDER=PCI_BUS_ID \
          CUDA_VISIBLE_DEVICES=0 \
-         MKL_NUM_THREADS=1 \
-         NUMEXPR_NUM_THREADS=1 \
-         OMP_NUM_THREADS=1 \
-         python demo.py --root '/media/yanconglin/4408c7fc-2531-4bdd-9dfd-421b2cc2246e/Dataset/scene_flow/argoverse2/' \
+         python demo.py --root 'path/to/data' \
         --dataset='argo'  --split='val' \
         --if_gpu  --gpu_idx=0 \
         --if_save \
