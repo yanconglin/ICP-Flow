@@ -2,7 +2,7 @@
 
 Official implementation: [ICP-Flow: LiDAR Scene Flow Estimation with ICP](https://arxiv.org/abs/2402.17351) (CVPR 2024) 
 
-[Yancong Lin](https://yanconglin.github.io/) and [Holger Caesar]([https://silvialaurapintea.github.io/](https://sites.google.com/it-caesar.de/homepage/)).
+[Yancong Lin](https://yanconglin.github.io/) and [Holger Caesar](https://silvialaurapintea.github.io/](https://sites.google.com/it-caesar.de/homepage/).
 
 Intelligent Vehicles Group, Delft University of Technology, The Netherlands
 
@@ -17,12 +17,19 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
 
 ### Installation
 
-For easy reproducibility, you are suggested to install [miniconda](https://docs.conda.io/en/latest/miniconda.html) (or [anaconda](https://www.anaconda.com/distribution/) if you prefer) before following executing the following commands. 
+1. For easy reproducibility, you are suggested to install [miniconda](https://docs.conda.io/en/latest/miniconda.html) (or [anaconda](https://www.anaconda.com/distribution/) if you prefer) before following executing the following commands. 
 
 ```bash
 conda create -f environment.yml
 ```
+2. Install Patchwork++ for ground segmentation via [Patchwork++: Fast and robust ground segmentation solving partial under-segmentation using 3D point cloud]([https://github.com/url-kaist/patchwork-plusplus](https://github.com/url-kaist/patchwork-plusplus/issues/31)). Or you can simply do
 
+```bash
+# in patchwork-plusplus directory
+$ mkdir build && cd build
+$ cmake ..
+$ make
+```
 ### Processing the Dataset
 
 Follow [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) to prepare the dataset, or you can simply run
