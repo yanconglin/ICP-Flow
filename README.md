@@ -65,7 +65,7 @@ unzip data.zip
    
 
 ### Test ICP-Flow
-Configure all variables beforehand within the *.sh files. You may find detailed results at [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
+Configure all variables beforehand within the *.sh files. You may find all results at [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
 
 ```bash
 bash main.sh
