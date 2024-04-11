@@ -39,11 +39,12 @@ unzip data.zip
    
 
 ### Test
-Waymo and nuScenes: configure all variables beforehand within the *.sh files.
+Configure all variables beforehand within the *.sh files.
 
 ```bash
 bash main_waymo.sh
 bash main_nuscenes.sh
+bash main_argo.sh
 ```
 
 Regarding the Argoverse-v2 scene flow dataset, see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details, what I did was:
