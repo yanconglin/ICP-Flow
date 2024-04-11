@@ -70,7 +70,6 @@ bash demo.sh
 ```
 
 ### Citation
-If you find our paper useful in your research, please consider citing:
 ```bash
 @article{lin2024icp,
   title={ICP-Flow: LiDAR Scene Flow Estimation with ICP},
