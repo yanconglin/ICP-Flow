@@ -19,6 +19,7 @@ bash -c "CUDA_DEVICE_ORDER=PCI_BUS_ID \
 echo 'processing waymo completed!'
 
 echo 'processing nuscenes'
+# better result than the paper
 bash -c "python main.py --root '/path/to/pca/scene_flow' \
         --dataset='nuscene' \
         --if_gpu \
