@@ -1,5 +1,3 @@
-
-source /home/yanconglin/miniconda3/etc/profile.d/conda.sh
 conda activate icp_flow 
 pwd
 
