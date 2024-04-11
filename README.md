@@ -70,7 +70,7 @@ bash main.sh
 
 ### ICP-Flow + FNN
 
-ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
+ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW) (todo). 
 
 ### Demo
 
