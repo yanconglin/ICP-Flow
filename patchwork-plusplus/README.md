@@ -1,4 +1,4 @@
-# Patchwork++
+# Patchwork++, adapted to ICP-Flow to accommodate the point indices.
 
 ## :bookmark_tabs: About Patchwork++ (IROS'22)
 
@@ -40,10 +40,6 @@
 ```bash
 # To install Eigen and numpy
 $ sudo apt-get install libeigen3-dev
-$ pip install numpy
-
-# To install Open3D Python packages
-$ pip install open3d
 
 # To install Open3D C++ packages
 $ git clone https://github.com/isl-org/Open3D
