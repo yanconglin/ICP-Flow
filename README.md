@@ -26,15 +26,20 @@ conda create -f environment.yml
 
 ### Processing the Dataset
 
-Follow [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) to prepare the dataset, or you can simply run
+Waymo and nuScenes: follow [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) to prepare the dataset, or you can simply run
 
 ```bash
 wget --no-check-certificate --show-progress https://share.phys.ethz.ch/~gsg/PCAccumulation/data.zip
 unzip data.zip
 ```
 
+Argoverse-v2: see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details.
+
+Differing from the ZeroFlow dataloader, what I did was: run ZeroFlow on the val/test set, and then save the points/labels in a .npz file per sample. See [dataset_argo.py](dataset_argo.py) for details.
+   
+
 ### Test
-Configure all variables beforehand within the *.sh files.
+Waymo and nuScenes: configure all variables beforehand within the *.sh files.
 
 ```bash
 bash main_waymo.sh
