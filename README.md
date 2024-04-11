@@ -68,9 +68,6 @@ bash main_nuscenes.sh
 bash main_argo.sh
 ```
 
-### Full results on Waymo,nuScenes, and Argoverse-v2
-Check *.txt.
-
 ### ICP-Flow + FNN
 
 ICP-Flow + FNN shares the identical design as ZeroFlow. You can download our pre-trained weights from [SURFdrive](). 
