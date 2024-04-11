@@ -13,6 +13,8 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
 
 ## Main feature: motion rigidity, by ground segmentation + clustering + Iterative Closesest Point (ICP).
 
+ <img src="figs/icp_flow.png" width="600"> 
+
 ## Reproduction
 
 ### Installation
