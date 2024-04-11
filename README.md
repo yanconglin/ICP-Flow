@@ -35,7 +35,7 @@ unzip data.zip
 
 2. Argoverse-v2: see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details.
 
-Differing from the ZeroFlow dataloader, what I did was: run ZeroFlow on the val/test set, and then save the points/labels in a .npz file per sample. See [dataset_argo.py](dataset_argo.py) for details.
+   Let op: Differing from the ZeroFlow dataloader, what I did was: run ZeroFlow on the val/test set, and then save the points/labels in a .npz file per sample. See [dataset_argo.py](dataset_argo.py) for details.
    
 
 ### Test
