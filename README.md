@@ -22,7 +22,27 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
 ```bash
 conda create -f environment.yml
 ```
-2. Install [Patchwork++](https://github.com/url-kaist/patchwork-plusplus) for ground segmentation, by following [patchwork-plusplus/README.md](patchwork-plusplus/README.md). It may take a while. There are several modifications on top of the original Patchwork++ to accommodate point indices.
+2. Install [Patchwork++](https://github.com/url-kaist/patchwork-plusplus) for ground segmentation, by following [patchwork-plusplus/README.md](patchwork-plusplus/README.md). It may take a while. There are several modifications on top of the original Patchwork++ to output point indices.
+
+```bash
+# To install Eigen and numpy
+$ sudo apt-get install libeigen3-dev
+
+# To install Open3D C++ packages
+$ git clone https://github.com/isl-org/Open3D
+$ cd Open3D
+$ util/install_deps_ubuntu.sh # Only needed for Ubuntu
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ sudo make install
+
+# To install Patchwork++
+$ cd patchwork-plusplus
+$ mkdir build && cd build
+$ cmake ..
+$ make
+```
 
 ### Processing the Dataset
 
