@@ -20,7 +20,7 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
 
 ### Installation
 
-1. For easy reproducibility, you are suggested to install [miniconda](https://docs.conda.io/en/latest/miniconda.html) (or [anaconda](https://www.anaconda.com/distribution/) if you prefer) before following executing the following commands. 
+1. Conda env setup.
 
 ```bash
 conda create -f environment.yml
