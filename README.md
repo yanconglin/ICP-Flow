@@ -60,12 +60,10 @@ unzip data.zip
    
 
 ### Test
-Configure all variables beforehand within the *.sh files. You can also find detailed result from [SURFdrive](). 
+Configure all variables beforehand within the *.sh files. You can also find detailed result from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
 
 ```bash
-bash main_waymo.sh
-bash main_nuscenes.sh
-bash main_argo.sh
+bash main.sh
 ```
 
 ### ICP-Flow + FNN
