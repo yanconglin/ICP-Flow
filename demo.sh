@@ -1,7 +1,7 @@
 echo 'processing argo'
 pwd
 source /home/yanconglin/miniconda3/etc/profile.d/conda.sh
-conda activate sf_icp 
+conda activate icp_flow 
 
 bash -c "CUDA_DEVICE_ORDER=PCI_BUS_ID \
          CUDA_VISIBLE_DEVICES=0 \
