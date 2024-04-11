@@ -25,7 +25,7 @@ conda create -f environment.yml
 
 ### Processing the Dataset
 
-Download and unzip the dataset to a desired position from [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation), or you can simply run
+Follow [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) to prepare the dataset, or you can simply run
 
 ```bash
 wget --no-check-certificate --show-progress https://share.phys.ethz.ch/~gsg/PCAccumulation/data.zip
