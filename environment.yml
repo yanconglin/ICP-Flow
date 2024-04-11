@@ -1,4 +1,4 @@
-name: sf_icp
+name: icp_flow
 channels:
   - plotly
   - pytorch
@@ -199,4 +199,4 @@ dependencies:
       - werkzeug==2.3.3
       - widgetsnbextension==4.0.7
       - zipp==3.15.0
-prefix: /home/yanconglin/miniconda3/envs/sf_icp
+prefix: /home/yanconglin/miniconda3/envs/icp_flow
