@@ -60,7 +60,7 @@ unzip data.zip
    
 
 ### Test
-Configure all variables beforehand within the *.sh files.
+Configure all variables beforehand within the *.sh files. You can also find detailed result from [SURFdrive](). 
 
 ```bash
 bash main_waymo.sh
