@@ -56,7 +56,9 @@ unzip data.zip
 2. Argoverse-v2: see [ZeroFlow: Scalable Scene Flow via Distillation](https://github.com/kylevedder/zeroflow) for details.
 
    For simplicity, I took a different approach to load data: run ZeroFlow on the val/test set, and then save the points/labels in a .npz file per sample.
-   See [dataset_argo.py](dataset_argo.py) for detail. Alternatively, you can also load pretrained checkpoints (see below) to ZeroFlow and test on Argoverse-v2 using the ZeroFlow codebase. 
+   See [dataset_argo.py](dataset_argo.py) for details.
+
+   Alternatively, you may also load pretrained checkpoints (see below) to ZeroFlow and test on Argoverse-v2 using the ZeroFlow codebase. 
    
 
 ### Test
