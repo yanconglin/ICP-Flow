@@ -43,7 +43,7 @@ Note: This version requires a GPU. The CPU-only version has not been released ye
 
 ### Dataset
 
-1. Waymo and nuScenes: see [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) for details. Or you can simply do
+1. Waymo and nuScenes: see [Dynamic 3D Scene Analysis by Point Cloud Accumulation](https://github.com/prs-eth/PCAccumulation) for details.
 
 ```bash
 wget --no-check-certificate --show-progress https://share.phys.ethz.ch/~gsg/PCAccumulation/data.zip
@@ -67,7 +67,7 @@ bash main.sh
 
 ### ICP-Flow + FNN
 
-ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW) (todo). 
+ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
 
 ### Demo
 
