@@ -1,6 +1,10 @@
 name: icp_flow
 channels:
+  - pytorch3d
+  - pyg
   - plotly
+  - bottler
+  - iopath
   - pytorch
   - anaconda
   - conda-forge
@@ -8,6 +12,11 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_kmp_llvm
+  - absl-py=2.0.0=pyhd8ed1ab_0
+  - aiohttp=3.9.1=py39hd1e30aa_0
+  - aiosignal=1.3.1=pyhd8ed1ab_0
+  - async-timeout=4.0.3=pyhd8ed1ab_0
+  - attrs=23.1.0=pyh71513ae_1
   - blas=1.0=mkl
   - blosc=1.21.3=h6a678d5_0
   - bottleneck=1.3.5=py39h7deecbd_0
@@ -16,13 +25,16 @@ dependencies:
   - brunsli=0.1=h2531618_0
   - bzip2=1.0.8=h7b6447c_0
   - c-ares=1.18.1=h7f8727e_0
-  - ca-certificates=2023.7.22=hbcca054_0
-  - certifi=2023.7.22=pyhd8ed1ab_0
+  - ca-certificates=2023.11.17=hbcca054_0
+  - cachetools=5.3.2=pyhd8ed1ab_0
+  - certifi=2023.11.17=pyhd8ed1ab_0
+  - cffi=1.16.0=py39h7a31438_0
   - cfitsio=3.470=h5893167_7
   - charls=2.2.0=h2531618_0
   - charset-normalizer=3.2.0=pyhd8ed1ab_0
   - cloudpickle=2.0.0=pyhd3eb1b0_0
   - contourpy=1.0.5=py39hdb19cb5_0
+  - cryptography=41.0.3=py39h130f0dd_0
   - cudatoolkit=11.6.0=hecad31d_10
   - cycler=0.11.0=pyhd3eb1b0_0
   - cython=0.29.33=py39h6a678d5_0
@@ -33,15 +45,22 @@ dependencies:
   - fftw=3.3.9=h27cfd23_1
   - fonttools=4.25.0=pyhd3eb1b0_0
   - freetype=2.12.1=h4a9f257_0
+  - frozenlist=1.4.0=py39hd1e30aa_1
   - fsspec=2022.11.0=py39h06a4308_0
+  - fvcore=0.1.5.post20221221=pyhd8ed1ab_0
   - giflib=5.2.1=h5eee18b_1
   - gmp=6.2.1=h58526e2_0
   - gnutls=3.6.13=h85f3911_1
+  - google-auth=2.25.2=pyhca7485f_0
+  - google-auth-oauthlib=0.4.1=py_2
+  - grpcio=1.42.0=py39hce63b2e_0
   - hdbscan=0.8.29=py39h389d5f1_2
   - idna=3.4=pyhd8ed1ab_0
   - imagecodecs=2021.8.26=py39hf0132c2_1
   - imageio=2.19.3=py39h06a4308_0
   - intel-openmp=2021.4.0=h06a4308_3561
+  - iopath=0.1.9=py39
+  - jinja2=3.1.2=py39h06a4308_0
   - joblib=1.1.1=py39h06a4308_0
   - jpeg=9e=h7f8727e_0
   - jxrlib=1.1=h7b6447c_2
@@ -66,6 +85,7 @@ dependencies:
   - libiconv=1.17=h166bdaf_0
   - libnghttp2=1.46.0=hce63b2e_0
   - libpng=1.6.37=hbc83047_0
+  - libprotobuf=3.15.8=h780b84a_1
   - libssh2=1.10.0=h8f2d780_0
   - libstdcxx-ng=11.2.0=h1234567_1
   - libtiff=4.5.0=h6a678d5_1
@@ -75,11 +95,13 @@ dependencies:
   - llvm-openmp=14.0.6=h9e868ea_0
   - locket=1.0.0=py39h06a4308_0
   - lz4-c=1.9.4=h6a678d5_0
+  - markdown=3.5.1=pyhd8ed1ab_0
   - matplotlib-base=3.6.2=py39h945d387_0
   - mkl=2021.4.0=h06a4308_640
   - mkl-service=2.4.0=py39h7f8727e_0
   - mkl_fft=1.3.1=py39hd3c417c_0
   - mkl_random=1.2.2=py39h51133e4_0
+  - multidict=6.0.4=py39hd1e30aa_1
   - munkres=1.1.4=py_0
   - ncurses=6.4=h6a678d5_0
   - nettle=3.6=he412f7d_0
@@ -87,15 +109,27 @@ dependencies:
   - numexpr=2.8.4=py39he184ba9_0
   - numpy=1.23.5=py39h14f4228_0
   - numpy-base=1.23.5=py39h31eccc5_0
+  - nvidiacub=1.10.0=0
+  - oauthlib=3.2.2=pyhd8ed1ab_0
   - openh264=2.1.1=h780b84a_0
   - openjpeg=2.4.0=h3ad879b_0
-  - openssl=1.1.1u=hd590300_0
+  - openssl=1.1.1w=hd590300_0
   - packaging=22.0=py39h06a4308_0
   - pandas=1.5.2=py39h417a72b_0
   - partd=1.2.0=pyhd3eb1b0_1
   - pillow=9.3.0=py39h6a678d5_2
   - pip=23.0.1=py39h06a4308_0
   - plotly=5.14.1=py_0
+  - portalocker=2.7.0=py39hf3d152e_0
+  - pot=0.8.2=py39h1832856_0
+  - protobuf=3.15.8=py39he80948d_0
+  - pyasn1=0.5.1=pyhd8ed1ab_0
+  - pyasn1-modules=0.3.0=pyhd8ed1ab_0
+  - pycparser=2.21=pyhd8ed1ab_0
+  - pyg=2.3.0=py39_torch_1.12.0_cu116
+  - pyjwt=2.8.0=pyhd8ed1ab_0
+  - pympler=1.0.1=pyhd8ed1ab_0
+  - pyopenssl=23.2.0=pyhd8ed1ab_1
   - pyparsing=3.0.9=py39h06a4308_0
   - pysocks=1.7.1=pyha2e5f31_6
   - python=3.9.16=h7a1cb2a_2
@@ -103,11 +137,16 @@ dependencies:
   - python_abi=3.9=2_cp39
   - pytorch=1.12.0=py3.9_cuda11.6_cudnn8.3.2_0
   - pytorch-mutex=1.0=cuda
+  - pytorch-scatter=2.1.0=py39_torch_1.12.0_cu116
+  - pytorch3d=0.7.4=py39_cu116_pyt1120
   - pytz=2022.7=py39h06a4308_0
+  - pyu2f=0.1.5=pyhd8ed1ab_0
   - pywavelets=1.4.1=py39h5eee18b_0
   - pyyaml=6.0=py39h5eee18b_1
   - readline=8.2=h5eee18b_0
   - requests=2.31.0=pyhd8ed1ab_0
+  - requests-oauthlib=1.3.1=pyhd8ed1ab_0
+  - rsa=4.9=pyhd8ed1ab_0
   - scikit-image=0.19.3=py39h6a678d5_1
   - scikit-learn=1.2.0=py39h6a678d5_1
   - scipy=1.9.3=py39h14f4228_0
@@ -116,30 +155,38 @@ dependencies:
   - six=1.16.0=pyhd3eb1b0_1
   - snappy=1.1.9=h295c915_0
   - sqlite=3.41.2=h5eee18b_0
+  - tabulate=0.9.0=pyhd8ed1ab_1
   - tenacity=8.2.2=py39h06a4308_0
+  - tensorboard=2.6.0=py_0
+  - tensorboard-plugin-wit=1.8.1=pyhd8ed1ab_0
+  - termcolor=2.3.0=pyhd8ed1ab_0
   - threadpoolctl=2.2.0=pyh0d69192_0
   - tifffile=2021.7.2=pyhd3eb1b0_2
   - tk=8.6.12=h1ccaba5_0
   - toolz=0.12.0=py39h06a4308_0
   - torchaudio=0.12.0=py39_cu116
   - torchvision=0.13.0=py39_cu116
+  - tqdm=4.65.0=py39hb070fc8_0
   - typing_extensions=4.7.1=pyha770c72_0
   - tzdata=2023c=h04d1e81_0
   - urllib3=2.0.3=pyhd8ed1ab_0
   - wheel=0.38.4=py39h06a4308_0
   - xz=5.2.10=h5eee18b_1
+  - yacs=0.1.8=pyhd8ed1ab_0
   - yaml=0.2.5=h7b6447c_0
+  - yarl=1.9.3=py39hd1e30aa_0
   - zfp=0.5.5=h295c915_6
   - zlib=1.2.13=h5eee18b_0
   - zstd=1.5.2=ha4553b6_0
   - pip:
       - addict==2.4.0
+      - argcomplete==3.1.2
       - asttokens==2.2.1
-      - attrs==23.1.0
       - backcall==0.2.0
       - blinker==1.6.2
       - click==8.1.3
       - colorama==0.4.6
+      - colorlog==6.7.0
       - comm==0.1.3
       - configargparse==1.5.3
       - dash==2.9.3
@@ -148,8 +195,11 @@ dependencies:
       - dash-table==5.0.0
       - debugpy==1.6.7
       - decorator==5.1.1
+      - distlib==0.3.7
+      - docopt==0.6.2
       - executing==1.2.0
       - fastjsonschema==2.16.3
+      - filelock==3.12.4
       - flask==2.3.2
       - importlib-metadata==6.6.0
       - ipykernel==6.22.0
@@ -157,46 +207,57 @@ dependencies:
       - ipywidgets==8.0.6
       - itsdangerous==2.1.2
       - jedi==0.18.2
-      - jinja2==3.1.2
       - jsonschema==4.17.3
       - jupyter-client==8.2.0
       - jupyter-core==5.3.0
       - jupyterlab-widgets==3.0.7
       - kiss-icp==0.2.9
+      - kornia==0.7.0
+      - llvmlite==0.41.1
       - markdown-it-py==2.2.0
       - markupsafe==2.1.2
       - matplotlib-inline==0.1.6
       - mdurl==0.1.2
+      - mmcv-full==1.7.1
       - natsort==8.3.1
       - nbformat==5.7.0
       - nest-asyncio==1.5.6
+      - nox==2023.4.22
+      - numba==0.58.1
       - open3d-cpu==0.17.0
+      - opencv-python==4.8.1.78
       - parmap==1.6.0
       - parso==0.8.3
       - pexpect==4.8.0
       - pickleshare==0.7.5
-      - platformdirs==3.5.0
+      - platformdirs==3.11.0
       - plyfile==0.9
+      - polars==0.19.11
       - prompt-toolkit==3.0.38
       - psutil==5.9.5
       - ptyprocess==0.7.0
       - pure-eval==0.2.2
+      - pyarrow==13.0.0
       - pydantic==1.10.7
       - pygments==2.15.1
+      - pyproj==3.6.1
       - pyquaternion==0.9.9
       - pyrsistent==0.19.3
       - pyzmq==25.0.2
       - rich==13.3.5
       - shellingham==1.5.0.post1
       - stack-data==0.6.2
+      - tomli==2.0.1
       - torchist==0.2.0
       - tornado==6.3.1
-      - tqdm==4.65.0
       - traitlets==5.9.0
       - typer==0.9.0
       - typing-extensions==4.5.0
+      - universal-pathlib==0.1.4
+      - virtualenv==20.24.6
       - wcwidth==0.2.6
       - werkzeug==2.3.3
       - widgetsnbextension==4.0.7
+      - yapf==0.40.2
       - zipp==3.15.0
 prefix: /home/yanconglin/miniconda3/envs/icp_flow

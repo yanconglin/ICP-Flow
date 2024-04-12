@@ -6,7 +6,7 @@ import hdbscan
 import open3d as o3d
 from utils_visualization import visualize_pcd
 try:
-    patchwork_module_path = os.path.join("/home/yanconglin/miniconda3/envs/sf_icp/patchwork-plusplus/build/python_wrapper") # local desktop
+    patchwork_module_path = os.path.join("patchwork-plusplus/build/python_wrapper") # local desktop
     sys.path.insert(0, patchwork_module_path)
     import pypatchworkpp
 except ImportError:
