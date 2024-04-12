@@ -32,27 +32,6 @@ class Dataset_argo():
         return infos
 
     def load_data_pca(self, data_path):
-        # data_info = dict(np.load(data_path))
-        # pcl_0 = data_info['pcl_0']
-        # pcl_1 = data_info['pcl_1']
-        # valid_0 = data_info['valid_0']
-        # valid_1 = data_info['valid_1']
-
-        # flow_0_1 = data_info['flow_0_1']
-        # flow_1_0 = data_info['flow_1_0']
-        # classes_0 = data_info['classes_0']
-        # classes_1 = data_info['classes_1']
-        # is_ground0 = data_info['is_ground_0']
-        # is_ground1 = data_info['is_ground_1']
-        # ego_motion = data_info['ego_motion']
-        # print('flow info', data_path,
-        #     pcl_0.shape, pcl_1.shape, 
-        #     valid_0.shape, valid_1.shape,
-        #     flow_0_1.shape, flow_1_0.shape,
-        #     classes_0.shape, classes_1.shape,
-        #     is_ground0.shape, is_ground1.shape, 
-        #     ego_motion.shape
-        # )
 
         data2_info = dict(np.load(data_path))
         pcl_0 = data2_info['pc1']
@@ -64,14 +43,6 @@ class Dataset_argo():
         class_1 = data2_info['pc2_classes']
         ground_0 = data2_info['ground1']
         ground_1 = data2_info['ground2']
-
-        # print('flow info2', data_path,
-        #     pcl_0.shape, pcl_1.shape, 
-        #     valid_0.shape, valid_1.shape,
-        #     flow_0_1.shape,
-        #     class_0.shape, class_1.shape,
-        #     ground_0.shape, ground_1.shape,
-        # )
 
         pcl_0 = pcl_0[valid_0]
         pcl_1 = pcl_1[valid_1]
@@ -148,17 +119,7 @@ class Dataset_argo():
             label_tmp = cluster_pcd(self.args, points_tmp, nonground_tmp)
             label_src = label_tmp[len(point_dst):]
             label_dst = label_tmp[0:len(point_dst)]
-
-            # if j==4:
-            #     # visualize_pcd_plotly(point_src_ego[:, 0:3], label_src, num_colors=100)
-            #     # visualize_pcd_plotly(point_dst[:, 0:3], label_dst, num_colors=100)
-            #     label_src_show = np.zeros((len(point_src)))-1e8
-            #     label_src_show[label_src>=0]=1
-            #     label_dst_show = np.zeros((len(point_dst)))-1e8
-            #     label_dst_show[label_dst>=0]=2
-            #     visualize_pcd(np.concatenate([point_src_ego, point_dst], axis=0), np.concatenate([label_src_show, label_dst_show], axis=0),
-            #               num_colors=3, title=f'input: src_ego, dst: {j}')
-          
+ 
             labels_src.append(label_src)
             labels_dst.append(label_dst)
             points_src.append(point_src_ego)

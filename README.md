@@ -31,15 +31,6 @@ conda create -f environment.yml
 # To install Eigen
 $ sudo apt-get install libeigen3-dev
 
-# To install Open3D C++ packages
-$ git clone https://github.com/isl-org/Open3D
-$ cd Open3D
-$ util/install_deps_ubuntu.sh # Only needed for Ubuntu
-$ mkdir build && cd build
-$ cmake ..
-$ make
-$ sudo make install
-
 # To install Patchwork++
 $ cd patchwork-plusplus
 $ mkdir build && cd build
