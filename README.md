@@ -79,6 +79,9 @@ bash demo.sh
 
 Todo:  
 
+### Acknowledge
+
+Many thanks to the authors of ZeroFlow and Point Cloud Accumulation.
 
 ### Citation
 ```bash
