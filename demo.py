@@ -27,7 +27,6 @@ from utils_track import track
 from utils_flow import flow_estimation_torch
 from utils_eval import AverageMeter, calculate_metrics
 from utils_loading import collate
-from utils_helper import trackers_recursive
 from utils_ground import segment_ground
 from utils_cluster import cluster_pcd
 from utils_debug import debug_frame
@@ -100,11 +99,11 @@ if __name__ == "__main__":
                         help='use kiss_icp or gt for ego motion compensation')
 
     # dataset: 
-    parser.add_argument('--dataset', type=str, default='waymo',
+    parser.add_argument('--dataset', type=str, default='argo',
                         help='which dataset')
     parser.add_argument('--split', type=str, default='test',
                         help='split: train/val/test')
-    parser.add_argument('--root', type=str, default='/mnt/Data/Dataset/eth_scene_flow/compressed/waymo/val',
+    parser.add_argument('--root', type=str, default='./',
                         help='Path to dataset')
     parser.add_argument('--num_frames', type=int, default=5,
                         help='Number of frames per file (default: 5)')
@@ -201,13 +200,8 @@ if __name__ == "__main__":
     elif args.dataset in ['argo']:
         sf_dataset = Dataset_argo(args)
 
-    files = glob.glob(os.path.join(args.root, args.split+'_fast_flow', '*', '*.npz'))
+    files = glob.glob(os.path.join(args.root, '*.npz'))
     print('total files: ', len(files))
-    # files.sort()
-    random.shuffle(files)
-    time_total = 0
-    time_cluster = 0
-    time_match = 0
     for file in files:
         data = dataloader_minimal(file)
         point_src = data['point_src']
@@ -218,15 +212,11 @@ if __name__ == "__main__":
         # 0). two successive frames;
         # 1). points have been compendated by ego-motion;
         # 2). the ground has been removed from both;
-        time_per_sample = time.time()
         labels = cluster_pcd(args, np.concatenate([point_dst, point_src], axis=0), np.ones(len(point_src)+len(point_dst)).astype(bool))
         label_src = labels[len(point_dst):]
         label_dst = labels[0:len(point_dst)]
-        print('cluster time (seconds): ', (time.time()-time_per_sample))
-        time_cluster += (time.time()-time_per_sample)
         
         with torch.no_grad():
-            time_per_sample = time.time()
             torch.cuda.empty_cache()
             point_src = torch.from_numpy(point_src).float().to(device)
             point_dst = torch.from_numpy(point_dst).float().to(device)
@@ -239,8 +229,6 @@ if __name__ == "__main__":
                                 src_labels=label_src, dst_labels=label_dst, 
                                 pairs=pairs, transformations=transformations, pose=torch.eye(4)
                                 )
-            print('match  time (seconds): ', (time.time()-time_per_sample))
-            time_match += (time.time()-time_per_sample)
 
             point_src = point_src.cpu().numpy()
             point_dst = point_dst.cpu().numpy()
@@ -257,7 +245,7 @@ if __name__ == "__main__":
             #               num_colors=3, title=f"src vs src+flow: {data['data_path']}")
             visualize_pcd(np.concatenate([point_src, point_dst, point_src+flow], axis=0), 
                           np.concatenate([np.zeros(len(point_src))+1, np.zeros(len(point_dst))+2, np.zeros(len(point_src))], axis=0),
-                          num_colors=3, title=f"src+flow vs dst: {data['data_path']}")
+                          num_colors=3, title=f"src (green) vs dst (blue) vs src+flow (red): {data['data_path']}")
         if args.if_verbose:
             # if j<3: continue
             result = {
