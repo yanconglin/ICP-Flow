@@ -71,7 +71,7 @@ if __name__ == "__main__":
     parser.add_argument('--range_y', type=float, default=32,
                         help='crop the scene, +- range-y')
     parser.add_argument('--range_z', type=float, default=0.0,
-                        help='points lower than min_height are considered as ground')
+                        help='ground<=range_z, same as PCA ECCV22')
 
     # cluster parameters
     parser.add_argument('--num_clusters', type=int, default=100,
