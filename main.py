@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     # ground removal:
     parser.add_argument('--ground_slack', type=float, default=0.3,
-                        help='same as the SLIM ICCV21 and PCA ECCV22')
+                        help='same as SLIM ICCV21 and PCA ECCV22')
     parser.add_argument('--eval_ground', default=False, action='store_true', 
                         help='remove ground')
 
