@@ -21,8 +21,6 @@ import plotly
 from tqdm import tqdm
 import torch
 import plotly.graph_objs as go
-from dataset_pca import Dataset_pca
-from dataset_argo import Dataset_argo
 from utils_track import track
 from utils_flow import flow_estimation_torch
 from utils_eval import AverageMeter, calculate_metrics
@@ -194,11 +192,6 @@ if __name__ == "__main__":
         device_name = 'cpu'
     device = torch.device(device_name)
     print(f'device: {device}')
-
-    if args.dataset in ['waymo', 'nuscene']:
-        sf_dataset = Dataset_pca(args)
-    elif args.dataset in ['argo']:
-        sf_dataset = Dataset_argo(args)
 
     files = glob.glob(os.path.join(args.root, '*.npz'))
     print('total files: ', len(files))
