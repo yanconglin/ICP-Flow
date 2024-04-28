@@ -50,7 +50,7 @@ def estimate_init_pose(args, src, dst):
     bins_z = torch.arange(-args.thres_dist, args.thres_dist+args.thres_dist-eps, args.thres_dist)
     # print(f'bins: {bins_x.min()} {bins_x.max()} {bins_x.shape}, {bins_z.min()} {bins_z.max()} {bins_z}')
 
-    # bug there: when batch size is large!
+    # memeory may overflow when batch size is large!
     t_hist = hist(dst, src, 
                   bins_x.min(), bins_y.min(), bins_z.min(),
                   bins_x.max(), bins_y.max(), bins_z.max(),
