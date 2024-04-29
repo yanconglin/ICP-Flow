@@ -16,7 +16,7 @@ class Dataset_pca():
     def __init__(self, args):
         self.args = args
         seq_paths = self.meta_data_pca()
-        self.seq_paths = seq_paths[0:10]
+        self.seq_paths = seq_paths
         print(f'number of test sequences: {len(self.seq_paths)}')
 
     def meta_data_pca(self):
