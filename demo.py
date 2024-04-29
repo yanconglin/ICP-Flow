@@ -131,6 +131,8 @@ if __name__ == "__main__":
                         help='(default: 120/km/h * 10 Hz)')
     parser.add_argument('--translation_frame', type=float, default=3.333,
                         help='maximal transaltion-xy between two frames')
+    parser.add_argument('--chunk_size', type=int, default=50,
+                        help='useful to prevent memeory overflow (default: 50)')
 
     # icp parameters
     parser.add_argument('--thres_dist', type=float, default=0.1,
