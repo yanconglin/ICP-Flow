@@ -2,7 +2,7 @@ pwd
 echo 'processing waymo'
 bash -c "CUDA_DEVICE_ORDER=PCI_BUS_ID \
          CUDA_VISIBLE_DEVICES=0 \
-         python main.py --root '/path/to/pca/scene_flow' \
+         python main.py --root '/media/yanconglin/4408c7fc-2531-4bdd-9dfd-421b2cc2246e/Dataset/scene_flow/eth_scene_flow' \
         --dataset='waymo'  --split='test' \
         --if_gpu  --gpu_idx=0 \
         --num_frames=5  --range_x=32.0  --range_y=32.0  --range_z=0.04  --ground_slack=0.3 \
