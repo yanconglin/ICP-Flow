@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import open3d as o3d
 import seaborn as sns
-import pytorch3d.structures.meshes as pytorch3d_mesh
+import pytorch3d.transforms as pytorch3d_t
 import scipy
 import warnings
 import parmap
@@ -59,8 +59,8 @@ def check_transformation(args, translation, rotation, iou):
         return  False
 
     # # # check rotation, in degrees
-    # max_rot = args.thres_rot * 90.0
-    # if torch.abs(rotation[1:3]).max()>max_rot: # roll and pitch
-    #     return False
+    max_rot = args.thres_rot * 90.0
+    if torch.abs(rotation[1:3]).max()>max_rot: # roll and pitch
+        return False
 
     return True

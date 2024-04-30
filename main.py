@@ -106,8 +106,8 @@ if __name__ == "__main__":
                         help='threshold to reject unreliable matches')
     parser.add_argument('--thres_iou', type=float, default=0.1,
                         help='threshold to reject unreliable matches')
-    # parser.add_argument('--thres_rot', type=float, default=0.1,
-    #                     help='threshold to reject unreliable matches')
+    parser.add_argument('--thres_rot', type=float, default=0.1,
+                        help='threshold to reject unreliable matches')
 
     # ground removal:
     parser.add_argument('--ground_slack', type=float, default=0.3,
