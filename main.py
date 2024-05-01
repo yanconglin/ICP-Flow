@@ -197,7 +197,7 @@ if __name__ == "__main__":
             #               np.concatenate([label_src, label_dst], axis=0),
             #               num_colors=3, title=f'input: src vs dst: {i+1}-th pair')
             # update translation_frame
-            args.translation_frame = max(args.speed * 1, np.linalg.norm(ego_poses[i+1][0:3, -1])) * 2
+            args.translation_frame = max(args.speed * (i+1), np.linalg.norm(ego_poses[i+1][0:3, -1])) * 2
 
             # this demo uses GPUs for ICP calculating. 
             with torch.no_grad():
