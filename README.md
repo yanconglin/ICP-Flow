@@ -16,6 +16,11 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
  
 ## Reproduction
 
+### Bug fix:
+
+A bug fixed on 01-05-2024; tested locally.
+
+Todo:  
 ### Installation
 
 1. Conda env setup.
