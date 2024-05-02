@@ -58,7 +58,7 @@ def check_transformation(args, translation, rotation, iou):
     if iou<args.thres_iou:
         return  False
 
-    # # # check rotation, in degrees
+    # # # check rotation, in degrees, almost no impact on final result
     max_rot = args.thres_rot * 90.0
     if torch.abs(rotation[1:3]).max()>max_rot: # roll and pitch
         return False
