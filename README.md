@@ -81,7 +81,7 @@ bash demo.sh
 
 ### Argoverse-v2 Scene Flow Challenge
 
-Todo:  
+Please refer to the [leaderboard](https://eval.ai/web/challenges/challenge-page/2210/leaderboard).  
 
 ### Acknowledge
 
