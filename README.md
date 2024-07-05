@@ -17,7 +17,7 @@ Scene flow characterizes the 3D motion between two LiDAR scans captured by an au
  Ground Segmentation + Clustering + Iterative Closest Point (ICP)
 
 
-### Simple as it is: no need for annotation; no need for big data; no need for deep learning;
+Simple as it is: no need for annotation; no need for big data; no need for deep learning;
 
  
 ## Reproduction
