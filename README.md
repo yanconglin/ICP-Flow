@@ -73,7 +73,7 @@ unzip data.zip
    
 
 ### Test ICP-Flow
-Configure all variables beforehand within the *.sh files. You may find all results at [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
+Configure all variables beforehand within the *.sh files. You may find all results at [GoogleDrive](https://drive.google.com/drive/folders/1A-EG6kMBt-ONappN6Wt4bi9lzNLyHDgV?usp=sharing). 
 
 ```bash
 bash main.sh
@@ -81,7 +81,7 @@ bash main.sh
 
 ### ICP-Flow + FNN
 
-ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [SURFdrive](https://surfdrive.surf.nl/files/index.php/s/AqrrbdMV6hnELpW). 
+ICP-Flow + FNN has an identical design to ZeroFlow. You may download pre-trained weights from [GoogleDrive](https://drive.google.com/drive/folders/1A-EG6kMBt-ONappN6Wt4bi9lzNLyHDgV?usp=sharing). 
 
 ### Demo
 
